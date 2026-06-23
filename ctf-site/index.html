@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NeonCTF — Learn. Hack. Win.</title>
+  <meta name="description" content="NeonCTF — beginner-friendly Capture The Flag platform with easy/medium/hard challenges, simulated web security, points, and certificates." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/styles.css" />
+  <script defer src="assets/app.js"></script>
+</head>
+<body>
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="scanlines" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="brand" href="#home">
+      <span class="brand-mark">▣</span>
+      <span class="brand-name">NeonCTF</span>
+    </a>
+
+    <nav class="top-nav" aria-label="Primary">
+      <a href="#levels">Levels</a>
+      <a href="#how">How it works</a>
+      <a href="#faq">FAQ</a>
+      <a href="#auth" class="nav-cta">Sign in</a>
+    </nav>
+
+    <button class="nav-toggle" aria-label="Open menu" data-nav-toggle>
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+    <!-- HERO / ABOUT-US SCROLL ANIMATION VIBE -->
+    <section id="home" class="hero">
+      <div class="hero-inner">
+        <div class="hero-left">
+          <div class="kicker">Capture The Flag platform for beginners</div>
+          <h1>
+            Learn cybersecurity fundamentals
+            <span class="accent">by catching flags</span>.
+          </h1>
+          <p class="hero-sub">
+            30 challenges (Easy/Medium/Hard), simulated web vulnerabilities (XSS/SQLi/cookies/JWT), hints,
+            points, leaderboard, and downloadable completion certificates.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#auth" data-scrollto>
+              Start / Sign in
+            </a>
+            <a class="btn btn-ghost" href="#levels" data-scrollto>
+              View levels
+            </a>
+          </div>
+
+          <div class="hero-stats" role="list" aria-label="Platform stats">
+            <div class="stat" role="listitem">
+              <div class="stat-top"><span class="neon">30</span> challenges</div>
+              <div class="stat-bot">3 difficulty levels</div>
+            </div>
+            <div class="stat" role="listitem">
+              <div class="stat-top"><span class="neon">+∞</span> learning</div>
+              <div class="stat-bot">Hints + explanations</div>
+            </div>
+            <div class="stat" role="listitem">
+              <div class="stat-top"><span class="neon">PDF</span> certificate</div>
+              <div class="stat-bot">Generated on completion</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="hero-card" aria-label="Interactive scroll animation card">
+            <div class="hero-card-top">
+              <span class="chip">LIVE</span>
+              <span class="chip chip-cyan">SCANNING</span>
+              <span class="chip chip-pink">NEON MODE</span>
+            </div>
+            <div class="hero-meter" aria-hidden="true">
+              <div class="meter-line"></div>
+              <div class="meter-glow"></div>
+              <div class="meter-knob" data-scroll-knob></div>
+            </div>
+
+            <div class="hero-card-content">
+              <div class="terminal">
+                <div class="terminal-bar">
+                  <span class="dot dot-red"></span>
+                  <span class="dot dot-yellow"></span>
+                  <span class="dot dot-green"></span>
+                  <div class="terminal-title">/dev/neonctf</div>
+                </div>
+                <div class="terminal-body">
+                  <div class="line"><span class="prompt">$</span> initialize ctf runtime</div>
+                  <div class="line">loading: <span class="muted">flags</span> ... ok</div>
+                  <div class="line">loading: <span class="muted">challenges</span> ... ok</div>
+                  <div class="line">loading: <span class="muted">certificates</span> ... ok</div>
+                  <div class="line">status: <span class="ok">ready</span></div>
+                </div>
+              </div>
+
+              <div class="scroll-anim" aria-hidden="true">
+                <div class="scroll-text">
+                  scroll to explore • scroll to explore • scroll to explore
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LEVEL PREVIEW -->
+    <section id="levels" class="section">
+      <div class="section-head">
+        <h2>Choose your difficulty</h2>
+        <p>Catch flags, earn points, and unlock the Master Challenge after all levels.</p>
+      </div>
+
+      <div class="level-grid" role="list">
+        <article class="level-card" role="listitem" data-level-preview="easy">
+          <div class="level-badge level-easy">Easy</div>
+          <h3>Warm-up</h3>
+          <p>Encoding, ciphers, hidden text, and logic starters.</p>
+          <ul class="mini-list">
+            <li>10 tasks</li>
+            <li>Lower hints cost</li>
+            <li>Fast certificate unlock</li>
+          </ul>
+        </article>
+
+        <article class="level-card" role="listitem" data-level-preview="medium">
+          <div class="level-badge level-medium">Medium</div>
+          <h3>Web fundamentals</h3>
+          <p>Simulated XSS/SQLi/cookies/JWT with reasoning.</p>
+          <ul class="mini-list">
+            <li>10 tasks</li>
+            <li>Hints available</li>
+            <li>Leaderboard points</li>
+          </ul>
+        </article>
+
+        <article class="level-card" role="listitem" data-level-preview="hard">
+          <div class="level-badge level-hard">Hard</div>
+          <h3>Attack mindset</h3>
+          <p>Logic chains and deeper decode puzzles.</p>
+          <ul class="mini-list">
+            <li>10 tasks</li>
+            <li>More points per flag</li>
+            <li>Master Challenge unlock</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="callout" id="auth">
+        <div class="callout-left">
+          <h3>Sign in to start</h3>
+          <p>
+            This platform runs fully client-side using local storage (no server needed).
+            Sign up with your phone number.
+          </p>
+        </div>
+        <div class="callout-right">
+          <div class="auth-shell" aria-label="Authentication panel">
+            <div class="tabs" role="tablist">
+              <button class="tab" role="tab" aria-selected="true" data-auth-tab="login">Sign in</button>
+              <button class="tab" role="tab" aria-selected="false" data-auth-tab="signup">Sign up</button>
+              <button class="tab" role="tab" aria-selected="false" data-auth-tab="reset">Reset password</button>
+            </div>
+
+            <div class="tab-panels">
+              <!-- LOGIN -->
+              <section class="panel" data-auth-panel="login" aria-label="Sign in">
+                <form id="loginForm">
+                  <label>
+                    Username
+                    <input name="username" autocomplete="username" required minlength="3" maxlength="24" />
+                  </label>
+                  <label>
+                    Phone number
+                    <input name="phone" inputmode="tel" autocomplete="tel" required minlength="7" maxlength="16" placeholder="+91..." />
+                  </label>
+                  <label>
+                    Password
+                    <input name="password" type="password" autocomplete="current-password" required minlength="6" />
+                  </label>
+                  <button class="btn btn-primary" type="submit">Sign in</button>
+                  <p class="form-note" data-form-message></p>
+                </form>
+              </section>
+
+              <!-- SIGNUP -->
+              <section class="panel hidden" data-auth-panel="signup" aria-label="Sign up">
+                <form id="signupForm">
+                  <label>
+                    Username
+                    <input name="username" required minlength="3" maxlength="24" placeholder="your handle" />
+                  </label>
+                  <label>
+                    Phone number
+                    <input name="phone" inputmode="tel" required minlength="7" maxlength="16" placeholder="+91..." />
+                  </label>
+                  <label>
+                    Password
+                    <input name="password" type="password" required minlength="6" />
+                  </label>
+                  <button class="btn btn-primary" type="submit">Create account</button>
+                  <p class="form-note" data-form-message></p>
+                </form>
+              </section>
+
+              <!-- RESET -->
+              <section class="panel hidden" data-auth-panel="reset" aria-label="Reset password">
+                <form id="resetForm">
+                  <label>
+                    Username
+                    <input name="username" required minlength="3" maxlength="24" />
+                  </label>
+                  <label>
+                    Phone number
+                    <input name="phone" inputmode="tel" required minlength="7" maxlength="16" />
+                  </label>
+                  <label>
+                    New password
+                    <input name="newPassword" type="password" required minlength="6" />
+                  </label>
+                  <button class="btn btn-primary" type="submit">Reset password</button>
+                  <p class="form-note" data-form-message></p>
+                </form>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section id="how" class="section">
+      <div class="section-head">
+        <h2>How it works</h2>
+        <p>A guided, beginner-friendly flow: read → hint (optional) → submit flag → earn points.</p>
+      </div>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-no">01</div>
+          <div class="step-body"><b>Sign in</b> with username + phone + password.</div>
+        </div>
+        <div class="step">
+          <div class="step-no">02</div>
+          <div class="step-body"><b>Pick a level</b> and solve 10 challenges.</div>
+        </div>
+        <div class="step">
+          <div class="step-no">03</div>
+          <div class="step-body"><b>Submit flags</b> to score and progress.</div>
+        </div>
+        <div class="step">
+          <div class="step-no">04</div>
+          <div class="step-body"><b>Get a certificate</b> after finishing all tasks in a level.</div>
+        </div>
+        <div class="step">
+          <div class="step-no">05</div>
+          <div class="step-body"><b>Master Challenge</b> unlocks after Easy+Medium+Hard.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section">
+      <div class="section-head">
+        <h2>FAQ</h2>
+      </div>
+
+      <div class="faq">
+        <details>
+          <summary>Is this real hacking?</summary>
+          <div>
+            Challenges are simulated to teach fundamentals. You’re practicing reasoning about common
+            concepts like encoding, injection patterns, and JWT structure.
+          </div>
+        </details>
+        <details>
+          <summary>Where are my progress and account stored?</summary>
+          <div>
+            Everything is stored in your browser’s <code>localStorage</code>. No server is used.
+          </div>
+        </details>
+        <details>
+          <summary>How do certificates work?</summary>
+          <div>
+            Certificates are generated client-side as a downloadable file when you complete a level.
+          </div>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <!-- APP SHELL (hidden until login) -->
+  <section id="appShell" class="app-shell hidden" aria-label="CTF application">
+    <div class="app-top">
+      <div class="app-brand">
+        <span class="brand-mark">▣</span>
+        <span>NeonCTF</span>
+        <span class="sep">•</span>
+        <span id="appUserLabel" class="muted"></span>
+      </div>
+
+      <div class="app-top-right">
+        <div class="score-pill">
+          Points: <b id="pointsLabel">0</b>
+        </div>
+        <button class="btn btn-ghost" id="logoutBtn">Logout</button>
+      </div>
+    </div>
+
+    <div class="app-body">
+      <aside class="sidebar">
+        <div class="side-card">
+          <div class="side-title">Leaderboard</div>
+          <div class="leaderboard" id="leaderboard"></div>
+        </div>
+
+        <div class="side-card">
+          <div class="side-title">Your progress</div>
+          <div class="progress-rows">
+            <div class="progress-row">
+              <span>Easy</span>
+              <span class="neon" data-level-progress="easy">0/10</span>
+            </div>
+            <div class="progress-row">
+              <span>Medium</span>
+              <span class="neon" data-level-progress="medium">0/10</span>
+            </div>
+            <div class="progress-row">
+              <span>Hard</span>
+              <span class="neon" data-level-progress="hard">0/10</span>
+            </div>
+          </div>
+          <div class="master-unlock" id="masterUnlock" aria-live="polite"></div>
+        </div>
+
+        <div class="side-card">
+          <div class="side-title">Certificates</div>
+          <div class="cert-list" id="certList"></div>
+        </div>
+      </aside>
+
+      <section class="content">
+        <div class="content-head">
+          <div>
+            <h2 id="contentTitle">Levels</h2>
+            <p id="contentSubtitle" class="muted">Pick a level to begin.</p>
+          </div>
+        </div>
+
+        <div class="content-tabs">
+          <button class="content-tab" data-view="easy">Easy</button>
+          <button class="content-tab" data-view="medium">Medium</button>
+          <button class="content-tab" data-view="hard">Hard</button>
+          <button class="content-tab" data-view="master">Master Challenge</button>
+        </div>
+
+        <div id="levelView" class="view"></div>
+      </section>
+    </div>
+  </section>
+
+  <!-- Toast -->
+  <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+</body>
+</html>
+
