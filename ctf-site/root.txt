@@ -1,0 +1,57 @@
+NeonCTF Answers (Developer helper)
+
+DO NOT USE IN A REAL CTF COMPETITION.
+
+Easy
+- e1: neonctf-base64-start
+- e2: neonctf-caesar-3
+- e3: neonctf-nocf
+- e4: neonctf-logic-01
+- e5: neonctf-hex
+- e6: neonctf-url-decode
+- e7: neonctf-math-33
+- e8: neonctf
+- e9: neonctf-3bang
+- e10: neonctf-rot13
+
+Medium
+- m1: neonctf-xss-1
+- m2: neonctf-sqli-1
+- m3: neonctf-jwt-HS256
+- m4: neonctf-cookie-session
+- m5: neonctf-coercion-true
+- m6: neonctf-vigenere
+- m7: neonctf%2F%2Fvign
+- m8: neonctf-traversal-1
+- m9: neonctf-order-ACB
+- m10: neonctf-hash-neon
+
+Hard
+- h1: neonctf-storedxss-1
+- h2: neonctf-jwt-plan-premium
+- h3: neonctf-constraint-8
+- h4: neonctf-affine-1
+- h5: neonctf-stego
+- h6: neonctf-csrf-rotate
+- h7: neonctf-boolean-A
+- h8: neonctf-base32
+- h9: neonctf
+- h10: neonctf-jwt-none-blocked
+
+Master Challenge (bonus)
+- q1: prevent_cross_site_request_forgery
+- q2: cookie_theft_via_xss
+- q3: x_frame_options
+- q4: minimize_access
+- q5: xss_injection
+- q6: reject_malicious_or_invalid_data
+- q7: they_are_public
+- q8: stateless_authentication
+- q9: hashing
+- q10: unsafely_concatenated_queries
+- q11: context_aware_output_encoding
+- q12: reusing_captured_requests
+- q13: origin_isolation
+- q14: rainbow_tables
+- q15: patch_and_report
+

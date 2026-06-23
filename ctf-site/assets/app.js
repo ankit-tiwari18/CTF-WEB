@@ -24,7 +24,7 @@
         desc: 'Decode the hidden Base64 string to reveal the flag.',
         prompt: 'Base64: bmVvbmN0Zi1iYXNlNjQtc3RhcnQ=',
         answer: 'neonctf-base64-start',
-        hint: 'It’s Base64; decoded ASCII is the flag.'
+        hint: 'Decode the Base64 payload and recover the flag in the platform format: neonctf-...'
       },
       {
         id: 'e2',
@@ -33,7 +33,7 @@
         desc: 'A Caesar cipher shift is protecting the flag.',
         prompt: 'Cipher (shift +3): wkhqhwcq...',
         answer: 'neonctf-caesar-3',
-        hint: 'Shift letters backward by 3.'
+        hint: 'Decrypt the Caesar shift by shifting letters backward by 3, then format as: neonctf-...'
       },
       {
         id: 'e3',
@@ -41,8 +41,9 @@
         title: 'Invisible Text',
         desc: 'Look closely at the hint text: some letters are “hidden” in plain sight.',
         prompt: 'Extract the letters from: "NeoNCTF" (take alternating characters).',
-        answer: 'nctf',
-        hint: 'Take every 2nd character starting from index 0.'
+        // Hint extracts NoCF from "NeoNCTF". Expected flag should match that logic.
+        answer: 'neonctf-nocf',
+        hint: 'Take every 2nd character starting from index 0. Then submit as: neonctf-nocf.'
       },
       {
         id: 'e4',
