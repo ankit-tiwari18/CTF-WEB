@@ -176,7 +176,7 @@
             <div class="tab-panels">
               <!-- LOGIN -->
               <section class="panel" data-auth-panel="login" aria-label="Sign in">
-                <form id="loginForm">
+                <form id="loginForm" class="auth-form">
                   <label>
                     Username
                     <input name="username" autocomplete="username" required minlength="3" maxlength="24" />
@@ -189,14 +189,19 @@
                     Password
                     <input name="password" type="password" autocomplete="current-password" required minlength="6" />
                   </label>
-                  <button class="btn btn-primary" type="submit">Sign in</button>
+
+                  <div class="auth-actions">
+                    <button class="btn btn-primary" type="submit">Sign in</button>
+                  </div>
+
                   <p class="form-note" data-form-message></p>
                 </form>
               </section>
 
+
               <!-- SIGNUP -->
               <section class="panel hidden" data-auth-panel="signup" aria-label="Sign up">
-                <form id="signupForm">
+                <form id="signupForm" class="auth-form">
                   <label>
                     Username
                     <input name="username" required minlength="3" maxlength="24" placeholder="your handle" />
@@ -209,14 +214,19 @@
                     Password
                     <input name="password" type="password" required minlength="6" />
                   </label>
-                  <button class="btn btn-primary" type="submit">Create account</button>
+
+                  <div class="auth-actions">
+                    <button class="btn btn-primary" type="submit">Create account</button>
+                  </div>
+
                   <p class="form-note" data-form-message></p>
                 </form>
               </section>
 
+
               <!-- RESET -->
               <section class="panel hidden" data-auth-panel="reset" aria-label="Reset password">
-                <form id="resetForm">
+                <form id="resetForm" class="auth-form">
                   <label>
                     Username
                     <input name="username" required minlength="3" maxlength="24" />
@@ -229,10 +239,15 @@
                     New password
                     <input name="newPassword" type="password" required minlength="6" />
                   </label>
-                  <button class="btn btn-primary" type="submit">Reset password</button>
+
+                  <div class="auth-actions">
+                    <button class="btn btn-primary" type="submit">Reset password</button>
+                  </div>
+
                   <p class="form-note" data-form-message></p>
                 </form>
               </section>
+
             </div>
           </div>
         </div>
